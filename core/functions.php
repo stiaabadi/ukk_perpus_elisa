@@ -10,19 +10,19 @@ $db = new BaseModel();
 function checkIsNotLogin()
 {
 	if (!isset($_SESSION['login'])) {
-		header("Location:http://localhost/ukk_perpus_aulia/login");
+		header("Location:http://localhost/ukk_perpus_elisa/login");
 	}
 }
 
 function urlTo($to)
 {
-	return 'http://localhost/ukk_perpus_aulia'.$to;
+	return 'http://localhost/ukk_perpus_elisa'.$to;
 }
 
 function redirectTo($icon, $pesan, $tujuan)
 {
 	setcookie('alert', serialize([$icon, $pesan]), time() + 1, '/');
-	header("Location:http://localhost/ukk_perpus_aulia".$tujuan);
+	header("Location:http://localhost/ukk_perpus_elisa".$tujuan);
 }
 
 function getTitle()
